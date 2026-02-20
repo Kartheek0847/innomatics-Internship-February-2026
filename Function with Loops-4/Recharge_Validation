@@ -1,0 +1,17 @@
+def validate_recharge(amount):
+    valid_plans = [199, 299, 399, 599]
+    
+    if amount >= 50 and amount in valid_plans:
+        return True
+    else:
+        return False
+
+
+while True:
+    recharge_amount = int(input("Enter recharge amount: "))
+
+    if validate_recharge(recharge_amount):
+        print("Recharge Successful")
+        break
+    else:
+        print("Invalid recharge amount. Try again.")
